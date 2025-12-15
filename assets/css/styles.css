@@ -19,12 +19,27 @@
          -> Choose any color 
          -> Copy the color mode (HSL)
   */
-  --hue: 255;
-  --first-color: hsl(var(--hue), 60%, 64%);
-  --first-color-alt: hsl(var(--hue), 80%, 56%);
+  /* --hue: 255; */
+  /* --first-color: hsl(var(--hue), 60%, 64%);
+  --first-color-alt: #B31B1B;
   --first-color-alt-2: hsl(var(--hue), 60%, 56%);
-  --first-color-light: hsl(var(--hue), 60%, 74%);
-  --title-color: hsl(240, 8%, 95%);
+  --first-color-light: #CE2029; */
+  /* --hue: 0;
+
+--first-color: hsl(var(--hue), 70%, 55%);
+--first-color-alt: hsl(var(--hue), 80%, 45%);
+--first-color-alt-2: hsl(var(--hue), 65%, 48%);
+--first-color-light: hsl(var(--hue), 70%, 70%); */
+
+ --hue: 350;
+
+  --first-color: hsl(var(--hue), 65%, 52%);
+  --first-color-alt: hsl(var(--hue), 75%, 44%);
+  --first-color-alt-2: hsl(var(--hue), 60%, 46%);
+  --first-color-light: hsl(var(--hue), 65%, 60%);
+
+
+ --title-color: hsl(240, 8%, 95%);
   --text-color: hsl(240, 8%, 70%);
   --text-color-light: hsl(240, 8%, 50%);
   --body-color: hsl(240, 100%, 2%);
@@ -235,8 +250,38 @@ img {
 
 
 /*=============== HOME ===============*/
+.home{
+    position: relative;
+}
 
+.home__container{
+    position:relative;
+    padding-top: 4rem;
+    row-gap: 3rem;
+}
 
+.home__greeting{
+    font-size: var(--h2-font-size);
+    font-weight:var(--font-regular);
+    color: var(--first-color);
+}
+
+.home__name{
+    font-size: var(--bigger-font-size);
+}
+
+.home__image{
+    position: relative;
+    display:grid;
+    overflow-x: clip;
+}
+
+.home__image .blob-animate{
+    width:250px;
+    height:250px;
+    top:6rem;
+    justify-self:flex-start;
+}
 /*=============== BUTTON ===============*/
 
 
@@ -294,7 +339,7 @@ img {
 
 
 /* For large devices */
-@media screen and (max-width : 1150px) {
+@media screen and (max-width : 900px) {
     .container{
         margin-inline: auto;
     }
