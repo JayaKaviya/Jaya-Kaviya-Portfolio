@@ -1,21 +1,27 @@
 /*=============== HOME SPLIT TEXT ===============*/
-const { animate,text, stagger} = anime;
+// import { animate, splitText, stagger } from 'https://cdn.jsdelivr.net/npm/animejs@4.0.0/+esm';
 
-const { chars: chars1 } = split('.home__profession-1', {chars: true });
-const { chars: chars2 } = split('.home__profession-2', {chars: true });
-
-animate(chars1, {
-  y: [
-    { to: ['100%', '0%'] },
-    { to: '-100%', delay: 4000, ease: 'in(3)' }
-  ],
+// Animate profession 1
+anime({
+  targets: '.home__profession-1',
+  translateY: ['100%', '0%'],  // slide in from bottom
   duration: 900,
-  ease: 'out(3)',
-  delay: stagger(80),
+  easing: 'easeOutCubic',
+  direction: 'alternate',       // slide up and down
   loop: true,
+  delay: 500
 });
 
-
+// Animate profession 2
+anime({
+  targets: '.home__profession-2',
+  translateY: ['100%', '0%'], 
+  duration: 900,
+  easing: 'easeOutCubic',
+  direction: 'alternate',
+  loop: true,
+  delay: 1000
+});
 
 
 
