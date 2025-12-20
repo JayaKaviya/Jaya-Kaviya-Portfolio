@@ -656,9 +656,16 @@ img {
       column-gap:5.5rem;
       padding-top:2rem;
     }
+    
+    .about__data,
+    .about__data .section__title{
+      text-align:initial;
+      z-index:2;
+    }
 
-
-
+    .about__description{
+      margin-bottom: 3rem;
+    }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
